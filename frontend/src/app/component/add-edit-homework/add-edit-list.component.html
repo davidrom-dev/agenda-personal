@@ -1,0 +1,18 @@
+<h3 class="mt-3">{{action}} task</h3>
+<form [formGroup]="agregarComentario" (ngSubmit)="agregarEditarTarea()">
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Title</label>
+        <input formControlName="titulo" type="text" class="form-control" id="titulo">
+      </div>
+      <div class="mb-3">
+        <label  for="creador" class="form-label">Creator</label>
+        <input formControlName="creador" type="text" class="form-control" id="creador">
+      </div> 
+      <div class="mb-3">
+        <label  for="texto" class="form-label">Text</label>
+        <textarea formControlName="texto" class="form-control" id="texto" rows="8"></textarea>
+      </div> 
+      <button type="submit" [disabled]="agregarComentario.invalid" class="btn btn-primary float-end">Accept</button>
+      <button class="btn btn-secondary"  routerLink="/">Back</button>
+
+</form>

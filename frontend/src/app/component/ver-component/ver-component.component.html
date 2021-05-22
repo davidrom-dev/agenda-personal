@@ -1,0 +1,18 @@
+<table class="table table-hover mt-3" *ngIf="comentario !== undefined">
+    <thead>
+        <tr>
+          <td><b>Title: </b>{{comentario.titulo}}</td>
+          <td><b>Creator: </b>{{comentario.creador}}</td>  
+          <td><b>Creation date: </b>{{comentario.fecha | date: "dd/MM/yyyy"}}</td>     
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+               {{comentario.texto}}
+            </td>
+          
+        </tr>
+    </tbody>
+</table>
+<div><button class="btn btn-secondary"  routerLink="/">Back</button></div>
