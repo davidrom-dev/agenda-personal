@@ -11809,11 +11809,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elipsys\\Desktop\\proyecto practica\\Backend\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\elipsys\\Desktop\\agenda\\Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\elipsys\\Desktop\\proyecto practica\\Backend\\Backend\\Backend.csproj",
+      "projectPath": "C:\\Users\\elipsys\\Desktop\\agenda\\Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\elipsys\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elipsys\\Desktop\\proyecto practica\\Backend\\Backend\\obj\\",
+      "outputPath": "C:\\Users\\elipsys\\Desktop\\agenda\\Backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
