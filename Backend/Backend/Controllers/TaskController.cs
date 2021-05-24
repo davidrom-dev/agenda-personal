@@ -24,9 +24,9 @@ namespace Backend.Controllers
         {
             try
             {
-                var listComentarios =   _context.Comentario.ToList();
+                var listTasks=   _context.Task.ToList();
 
-                return Ok(listComentarios);
+                return Ok(listTasks);
             }
             catch (Exception ex)
             {
@@ -41,14 +41,14 @@ namespace Backend.Controllers
         {
             try
             {
-                var comentario = await _context.Comentario.FindAsync(id);
+                var task = await _context.Task.FindAsync(id);
                 
-                if(comentario == null)
+                if(task == null)
                 {
                     NotFound();
                 }
 
-                return Ok(comentario);
+                return Ok(task);
             }
 
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Addtask([FromBody] Comentario comentario)
+        public async Task<IActionResult> Addtask([FromBody] Models.Task comentario)
          {
             DateTime Fecha = DateTime.Now;
 
@@ -72,7 +72,7 @@ namespace Backend.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditTask(int id, [FromBody] Comentario comentario)
+        public async Task<IActionResult> EditTask(int id, [FromBody] Models.Task comentario)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace Backend.Controllers
                 _context.Update(comentario);
 
                 await _context.SaveChangesAsync();
-                return Ok(new { messsage = "Tarea actualizada con exito" });
+                return Ok();
             }
 
             catch (Exception ex)
@@ -101,16 +101,16 @@ namespace Backend.Controllers
         {
             try
             {
-                var comentario = await _context.Comentario.FindAsync(id);
+                var task = await _context.Task.FindAsync(id);
 
-                if(comentario == null)
+                if(task == null)
                 {
                     return NotFound();
                 }
-                _context.Comentario.Remove(comentario);
+                _context.Task.Remove(task);
 
                 await _context.SaveChangesAsync();
-                return Ok(new{ messsage = "Tarea eliminada con exito" });
+                return Ok();
             }
 
             catch(Exception ex )

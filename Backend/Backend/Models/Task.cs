@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Backend.Models
 {
-    public class Comentario
+    public class Task
     {
         public int Id { get; set; }
         [Required]
